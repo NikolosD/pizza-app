@@ -4,7 +4,7 @@ import {Pizza} from "../../models/Pizza.ts";
 
 const initState = {
     title: '',
-    price: 0,
+    price: undefined,
     img: '',
 }
 
@@ -13,7 +13,7 @@ type Props = {
 }
 export const AddPizzaForm: FC<Props> = ({addPizza}) => {
 
-    const [newPizza, setNewPizza] = useState<{ title: string, price: number, img: string }>(initState)
+    const [newPizza, setNewPizza] = useState<{ title: string, price: number | undefined, img: string }>(initState)
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const {name,value} = e.currentTarget

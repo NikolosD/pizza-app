@@ -6,9 +6,9 @@ import {SinglePizza} from "./pizza/SinglePizza.tsx";
 
 const PIZZAS_PER_PAGE = 2;
 
-type DisplayPizzasProps = {};
 
-export const DisplayPizzas: React.FC<DisplayPizzasProps> = ({}: DisplayPizzasProps) => {
+
+export const DisplayPizzas: React.FC = ( ) => {
     const pizzaList = usePizzaStore(state => state.pizzaList);
     const currentPage = usePizzaStore(state => state.currentPage);
     const totalPages = usePizzaStore(state => state.totalPages);

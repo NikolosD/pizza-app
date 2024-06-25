@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import {Pizza} from "../../../models/Pizza.ts";
 import {AiFillEdit, AiFillDelete} from "react-icons/ai";
-import {EditPizzaForm} from "../../EditPizzaForm.tsx";
+import {EditPizzaForm} from "../EditPizzaForm.tsx";
 import {usePizzaStore} from "../../../store/usePizzaStore.ts";
+import {toast} from "react-toastify";
 
 type SinglePizzaProps = {
     pizza: Pizza;
@@ -21,6 +22,7 @@ export const SinglePizza: React.FC<SinglePizzaProps> = ({pizza}) => {
 
     const handleDelete = () => {
         deletePizza(pizza)
+        toast.success('Pizza deleted')
     }
 
 

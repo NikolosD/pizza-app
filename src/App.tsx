@@ -3,7 +3,8 @@ import './App.css';
 import {usePizzaStore} from "./store/usePizzaStore.ts";
 import {AddPizzaForm} from "./components/pizzas/AddPizzaForm.tsx";
 import {DisplayPizzas} from "./components/pizzas/DisplayPizzas.tsx";
-
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export const App: React.FC = () => {
@@ -14,6 +15,8 @@ export const App: React.FC = () => {
                 <span className='heading'>Our Pizza</span>
                 <AddPizzaForm addPizza={addPizza}/>
                 <DisplayPizzas/>
+
+                <ToastContainer />
             </div>
         </div>
     );
